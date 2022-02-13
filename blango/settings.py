@@ -194,6 +194,10 @@ class Dev(Configuration):
   # Debug toolbar
   INTERNAL_IPS = ["192.168.11.179", "192.168.10.226"]
 
+  # Registration
+  EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+  ACCOUNT_ACTIVATION_DAYS = 7
+
 class Prod(Dev):
   DEBUG = False
   SECRET_KEY = values.SecretValue()
